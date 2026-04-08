@@ -1,11 +1,66 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
+<footer class="border-t border-surface-200 bg-surface-100 py-12 mt-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Untitled Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Untitled Business. All rights reserved.</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <!-- Brand column -->
+      <div class="md:col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-3">
+          <svg class="w-6 h-6 text-brand-500" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="14" cy="11" rx="5.5" ry="6.5" fill="currentColor" opacity="0.9"/>
+            <path d="M10 16.5 Q7 19 6 24 H22 Q21 19 18 16.5" fill="currentColor" opacity="0.9"/>
+            <line x1="4" y1="24" x2="24" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+          <span class="font-black text-surface-900 tracking-tight" style="font-family: var(--font-display);">Roosted</span>
+        </a>
+        <p class="text-sm text-surface-800/50 leading-relaxed max-w-xs" style="font-family: var(--font-body);">
+          High-quality backyard chicken guides and premium coop plans — for first-timers and experienced keepers alike.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="text-xs font-semibold text-surface-900 tracking-widest uppercase mb-4" style="font-family: var(--font-body);">Resources</p>
+        <ul class="space-y-2">
+          {[
+            { label: "All Guides", href: "/blog" },
+            { label: "Breed Profiles", href: "/blog" },
+            { label: "Coop Plans", href: "#coop-plans" },
+            { label: "Beginner's Guide", href: "/blog" },
+          ].map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-surface-800/50 hover:text-surface-900 transition-colors" style="font-family: var(--font-body);">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-surface-900 tracking-widest uppercase mb-4" style="font-family: var(--font-body);">Topics</p>
+        <ul class="space-y-2">
+          {[
+            { label: "Chicken Health", href: "/blog" },
+            { label: "Feeding & Nutrition", href: "/blog" },
+            { label: "Coop Building", href: "/blog" },
+            { label: "Egg Production", href: "/blog" },
+          ].map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-surface-800/50 hover:text-surface-900 transition-colors" style="font-family: var(--font-body);">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider-feather mb-6" />
+
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <p class="text-xs text-surface-800/40" style="font-family: var(--font-body);">&copy; {year} Roosted. All rights reserved.</p>
+      <div class="flex items-center gap-5">
+        <a href="/blog" class="text-xs text-surface-800/40 hover:text-surface-800/70 transition-colors" style="font-family: var(--font-body);">Privacy</a>
+        <a href="/blog" class="text-xs text-surface-800/40 hover:text-surface-800/70 transition-colors" style="font-family: var(--font-body);">Terms</a>
+      </div>
     </div>
   </div>
 </footer>

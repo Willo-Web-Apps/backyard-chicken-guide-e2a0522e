@@ -1,11 +1,33 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/80 backdrop-blur-lg">
+<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/85 backdrop-blur-lg">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="text-lg font-bold tracking-tight text-surface-900 font-display">Untitled Business</a>
-    <div class="flex items-center gap-6">
-      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors">Blog</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">Get Started</a>
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="Roosted home">
+      <!-- Roost icon: simple SVG perch + bird silhouette -->
+      <svg class="w-7 h-7 text-brand-500" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="14" cy="11" rx="5.5" ry="6.5" fill="currentColor" opacity="0.9"/>
+        <path d="M10 16.5 Q7 19 6 24 H22 Q21 19 18 16.5" fill="currentColor" opacity="0.9"/>
+        <line x1="4" y1="24" x2="24" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M13.5 9 Q11 6 9 7.5" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="text-lg font-black tracking-tight text-surface-900 group-hover:text-brand-600 transition-colors" style="font-family: var(--font-display);">Roosted</span>
+    </a>
+
+    <!-- Nav links -->
+    <div class="hidden sm:flex items-center gap-6">
+      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors" style="font-family: var(--font-body);">Guides</a>
+      <a href="#coop-plans" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors" style="font-family: var(--font-body);">Coop Plans</a>
+      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors" style="font-family: var(--font-body);">Breeds</a>
     </div>
+
+    <!-- CTA -->
+    <a
+      href="#coop-plans"
+      class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors"
+      style="font-family: var(--font-body);"
+    >
+      Get Coop Plans
+    </a>
   </nav>
 </header>
